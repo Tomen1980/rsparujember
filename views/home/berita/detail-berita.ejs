@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="">
+
+<head>
+<title>RS Paru Jember</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="../tentang/images/favico.ico" type="image/x-icon">
+  <script src="../ckeditor/ckeditor.js"></script>
+<link href="../tentang/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="/">RS PARU JEMBER</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="/berita">Berita</a></li>
+        <li class="active"><a href="/">Kembali</a></li>
+        <!-- <li><a class="active" href="#">Masuk</a></li> -->
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay" style="background-image:url('../images/ruang/rsp_edited_edited.jpg');">
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="flexslider basicslider">
+      <ul class="slides">
+        <li>
+          <article>
+            <h3 class="heading">Detail Rs Paru </h3>
+            <!-- <p>yang aku bayar pada dokter hanya keahliannya. Perasaan ku ketika disembuhkan tak bisa ku bayar itulah utang rasa</p> -->
+            <!-- <footer><a class="btn" href="#">Nullam porttitor</a></footer> -->
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h3 class="heading">Berita</h3>
+   
+        <p><%= konten.judul %> </p>
+        <img src="../<%= konten.image %> " alt="">
+    </div>
+
+<!-- <p>
+</p> -->
+<div id="demo"> </div>
+<div id="myData" style="color:white;">
+  <%= konten.isi %> 
+</div>
+</main>
+<script>
+   
+  var x = document.getElementById("myData").innerText;
+  document.getElementById("demo").innerHTML = x;  
+ 
+  </script>
+  
+
+<%- include("../../template/templateTentang/footer.ejs")  %> 

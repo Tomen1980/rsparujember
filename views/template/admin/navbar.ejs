@@ -1,0 +1,81 @@
+<body>
+    <!-- Left Panel -->
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/admin"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                    </li>
+                    <li class="menu-title">UI elements</li><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Konten</a>
+                        <!-- <a href="/tambah-konten" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Tambah Konten</a> -->
+                        <ul class="sub-menu children dropdown-menu">                           
+                             <li><i class="fa fa-puzzle-piece"></i><a href="/tabel-konten">Konten</a></li>
+                             <li><i class="fa fa-bars"></i><a href="/tambah-konten">Tambah Konten</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Inventaris</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="/tabel-inventaris">Data Inventaris</a></li>
+                            <li><i class="fa fa-table"></i><a href="/tambah-inventaris">Tambah Inventaris</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Indikator</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="/tabel-indikator">Data Indikator</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="/tambah-indikator">Tambah Indikator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                    
+                    
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+    <!-- /#left-panel -->
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+        <!-- Header-->
+        <header id="header" class="header">
+            <div class="top-left">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/admin"><img src="../images/logo1.png" style="width: 50px;" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="../images/logo1.png" alt="Logo"></a>
+                    <!-- <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a> -->
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="header-menu">
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="../images/atrribut/admin.png" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href=""><i class="fa fa- user"></i>ADMIN</a>
+                            <a class="nav-link" href="/tabel-ppid"><i class="fa fa- user"></i>PPID<span class="count">13</span></a>
+                            <!-- <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a> -->
+                            <form action="/logout" method="post">
+                                <button class="btn btn-warning"><i class="fa fa-power -off"></i>Logout</a></button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+

@@ -1,0 +1,9 @@
+{
+    "env":{
+        "nameDB" : "agungjum_rsparu" ,
+        "userDB": "agungjum",
+        "passDB": "@gung111",
+        "engineDB": "mysql",
+        "hostDB":"65.19.141.67"
+    }
+}

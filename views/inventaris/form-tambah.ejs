@@ -1,0 +1,59 @@
+<%- include("../template/templateForm/head.ejs")  %> 
+
+<%- include("../template/admin/navbar.ejs")  %> 
+
+<div class="col-lg-6" style="margin-left: 250px;">
+    <div class="card">
+        <div class="card-header"><strong>Inventaris</strong><small><% if (edit) { %>
+                                                                    Fungsi Edit
+                                                                    <% }else{ %> 
+                                                                        Fungsi Tambah 
+                                                                    <%}%> </small>
+          </div>
+        <form action="/<%if(edit){%>edit-inventaris<%}else{%>tambah-inventaris<%}%>" method="post">
+            <% if(edit){%>
+                <input type="hidden" name="id" value="<%= inventaris.id %>">
+            <%}%>
+        <div class="card-body card-block">
+            <div class="form-group"><label for="company" class=" form-control-label">VIP</label><input type="number" value="<%= edit === true ? inventaris.vip : '' %>" id="company" name="vip" placeholder="total Ruangan Vip" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Anggrek</label><input type="number" value="<%= edit === true ? inventaris.anggrek : '' %>" id="company" name="anggrek" placeholder="total Ruangan Anggrek" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">HCU</label><input type="number" value="<%= edit === true ? inventaris.hcu : '' %>" id="company" name="hcu" placeholder="total Ruangan HCU" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">ICU</label><input type="number" value="<%= edit === true ? inventaris.icu : '' %>" id="company" name="icu" placeholder="total Ruangan ICU" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Dahlia II</label><input type="number" id="company" value="<%= edit === true ? inventaris.dahlia2 : '' %>" name="dahlia2" placeholder="total Ruangan Dahlia II" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Dahlia Isolasi</label><input type="number" value="<%= edit === true ? inventaris.dahliaI : '' %>" id="company" name="dahliaI" placeholder="total Ruangan Dahlia Isolasi" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Melati II</label><input type="number" value="<%= edit === true ? inventaris.melati2 : '' %>" id="company" name="melati2" placeholder="total Ruangan Melati II" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Tulip II</label><input type="number" value="<%= edit === true ? inventaris.tulip2 : '' %>" id="company" name="tulip2" placeholder="total Ruangan Tulip II" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Bougenvile II</label><input type="number" value="<%= edit === true ? inventaris.bougenvile2 : '' %>" id="company" name="bougenvile2" placeholder="total Ruangan Bougenvile 2" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Lavender II</label><input type="number" value="<%= edit === true ? inventaris.lavender2 : '' %>" id="company" name="lavender2" placeholder="total Ruangan Lavender II" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Mawar III</label><input type="number" value="<%= edit === true ? inventaris.mawar3 : '' %>" id="company" name="mawar3" placeholder="total Ruangan Mawar III" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Mawar Isolasi</label><input type="number" value="<%= edit === true ? inventaris.mawarI : '' %>" id="company" name="mawarI" placeholder="total Ruangan Mawar Isolasi" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Mawar Isolasi Khusus</label><input type="number" value="<%= edit === true ? inventaris.mawarIK : '' %>" id="company" name="mawarIK" placeholder="total Ruangan Mawar Isolasi Khusus" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Melati III</label><input type="number" value="<%= edit === true ? inventaris.melati3 : '' %>" id="company" name="melati3" placeholder="total Ruangan Melati III" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Tulip III</label><input type="number" value="<%= edit === true ?inventaris.tulip3 : '' %>" id="company" name="tulip3" placeholder="total Ruangan Tulip III" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Bougenvile III</label><input type="number" value="<%= edit === true ? inventaris.bougenvile3 : '' %>" id="company" name="bougenvile3" placeholder="total Ruangan bougenvile III" class="form-control"></div>
+
+            <div class="form-group"><label for="company" class=" form-control-label">Lavender III</label><input type="number" value="<%= edit === true ? inventaris.lavender3 : '' %>" id="company" name="lavender3" placeholder="total Ruangan Lavender III" class="form-control"></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm" style="height: 50px ; width: 505px;">
+            <i class="fa fa-dot-circle-o"></i> <%= edit === true ? 'Perbarui' : 'Tambah'  %>
+        </button>
+    </div>
+</form>
+</div>
+
+<%- include("../template/templateForm/footer.ejs")  %> 

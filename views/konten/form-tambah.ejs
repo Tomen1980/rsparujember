@@ -1,0 +1,62 @@
+<%- include("../template/templateForm/head.ejs")  %> 
+
+<%- include("../template/admin/navbar.ejs")  %> 
+
+<div class="content" style="width: 2000px;">
+    <div class="animated fadeIn">
+
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">
+                <% if (edit) { %>
+                 Edit
+                <% }else{ %>
+                    Tambah
+                <% } %>
+                </strong>
+        </div>
+        <div class="card-body" >
+            <!-- Credit Card -->
+            <div id="pay-invoice">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3 class="text-center">Konten</h3>
+                    </div>
+                    <hr>
+                    <form action="/<%if(edit){%>edit-konten<%}else{%>tambah-konten<%}%>" method="post" enctype="multipart/form-data">
+                      <% if(edit){ %>
+                        <div>
+                            <input type="hidden" name="id" value=" <%= konten.id %> ">
+                        </div>
+                      <%}%>
+
+                            <div class="form-group"><label for="company" class=" form-control-label">Judul Konten</label><input type="text" id="company" value="<%= edit === true ? konten.judul : '' %>" name="judul" placeholder="Isi Judul" class="form-control"></div>
+
+                            <div class="form-group"><label for="company" class=" form-control-label">Foto</label><input type="file" value="<%= edit === true ? konten.image : '' %>" id="file" name="image" placeholder="" class="form-control"></div>
+
+                            <div class="form-group"><label for="company" class=" form-control-label">Isi Konten</label><textarea name="isi" id="isi" cols="50" rows="10"><%= edit === true ? konten.isi : '' %></textarea>
+                            </div>
+
+                        <div>
+                            <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
+                                <i class="fa fa-lock fa-lg"></i>
+                                <%= edit === true ? 'Perbarui' : 'Tambah'  %>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- .card -->
+</div><!--/.col-->
+
+
+</div>
+</div>
+<script>
+    CKEDITOR.replace( 'isi' );
+</script>
+
+<%- include("../template/templateForm/footer.ejs")  %> 
