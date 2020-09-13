@@ -19,8 +19,8 @@ let transport = mailer.createTransport({
     tls: { rejectUnauthorized: false }
   });
 
-exports.getIndex = (req,res,next)=>{
-    inventarsModels.findAll(
+exports.getIndex = async (req,res,next)=>{
+   await inventarsModels.findAll(
         {
             limit : 1,
             order:[
