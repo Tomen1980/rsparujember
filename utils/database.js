@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 const session = require("express-session");
 const SessionStore = require("express-session-sequelize")(session.Store)
 const sequelize = new Sequelize(`${process.env.nameDB}`,`${process.env.userDB}`,`${process.env.passDB}`,{
-    dialect:`mysql`,
+    dialect:`${process.env.engineDB}`,
     host : `${process.env.hostDB}`,
     multipleStatements:true
 });
