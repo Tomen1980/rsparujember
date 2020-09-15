@@ -2,7 +2,7 @@ const express = require('express');
 const path = require("path");
 const app = express();
 const fs = require("fs");
-const port = process.env.PORT || "3000" ;
+const PORT = process.env.PORT || "3000" ;
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const flash = require("connect-flash");
@@ -102,7 +102,7 @@ app.use((error, req, res, next) => {
 //PORT
 sequelize.sequelize.sync()
     .then((result)=>{
-        const server = app.listen(port)
+        const server = app.listen(PORT)
         console.log("server is Running")
     })
     .catch((err)=>{
