@@ -102,7 +102,7 @@ app.use((error, req, res, next) => {
 //PORT
 sequelize.sequelize.sync()
     .then((result)=>{
-        const server = app.listen(process.env.PORT || '8080')
+        const server = app.listen(process.env.PORT || 8080)
         console.log("server is Running")
     })
     .catch((err)=>{
